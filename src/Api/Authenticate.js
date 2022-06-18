@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
 
 function Authenticate() {
@@ -9,23 +9,26 @@ function Authenticate() {
   const client__id =
     "300013803126-j7e8khlvmjftmnkjfn5rtvdtf4hp2eoc.apps.googleusercontent.com";
 
-  const google = useMemo(() => (window.google ? window.google : {}), []);
-
   useEffect(() => {
-    if (google !== undefined) {
-      google.accounts.id.initialize({
-        client_id: client__id,
-        callback: handleCookies,
-      });
-      google.accounts.id.renderButton(document.getElementById("theme"), {
-        theme: "outline",
-        size: "large",
-      });
+    try {
+      /*global google*/
+      if (google !== undefined) {
+        google.accounts.id.initialize({
+          client_id: client__id,
+          callback: handleCookies,
+        });
+        google.accounts.id.renderButton(document.getElementById("theme"), {
+          theme: "outline",
+          size: "large",
+        });
+      }
+    } catch (err) {
+      throw err;
     }
-  }, [google]);
+  }, []); 
   return (
     <div>
-      <button id="theme">{!google && "Loading"}</button>
+      <button id="theme"></button>
     </div>
   );
 }
@@ -48,6 +51,8 @@ export const IsAuthentcated = () => {
       setUser();
     }
   }, [user]);
+
+
 
   return { user, setUser, logUserOut };
 };
