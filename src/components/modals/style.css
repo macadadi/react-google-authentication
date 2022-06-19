@@ -1,0 +1,46 @@
+
+
+.Container{
+position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    padding: 3px;
+  
+    
+}
+.Container > div {
+    display: flex;
+    width: 88%;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    align-items: center;
+    height: 80%;
+  }
+
+.schoolContainer{ 
+
+width:  90%;
+max-width: 800px;
+align-items: center;
+justify-content: center;
+margin: auto;
+background: white;
+padding: 10px;
+}
+
+.domains{
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.closebtn{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 2px solid whitesmoke;
+  
+}

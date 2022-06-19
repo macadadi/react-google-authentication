@@ -2,14 +2,18 @@ import React, { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
 import { GoogleLogin } from "@react-oauth/google";
 
-function Authenticate() {
-  const handleCookies = (response) => {
+type Tresponse = {
+  credential: string;
+};
+
+function UnAthenticatedLink() {
+  const handleCookies: any = (response: Tresponse) => {
     localStorage.setItem("dtone_id", response.credential);
     window.location.reload();
   };
 
   return (
-    <div>
+    <div className="App">
       <GoogleLogin
         onSuccess={handleCookies}
         onError={() => {
@@ -20,24 +24,34 @@ function Authenticate() {
   );
 }
 
-export default Authenticate;
+export default UnAthenticatedLink;
 
-export const IsAuthentcated = () => {
+type Tuser = {
+  userName: string;
+  photoUrl: string;
+};
+type Tdetails = {
+  name: string;
+  picture: string;
+};
+
+export const AuthenticatedLink = () => {
+  const [user, setUser] = useState<Tuser>();
   const logUserOut = () => {
     localStorage.removeItem("dtone_id");
     window.location.reload();
   };
-  const [user, setUser] = useState();
+
   useEffect(() => {
     let token = localStorage.getItem("dtone_id");
     if (token) {
-      let details = jwt_decode(token);
-
-      setUser({ userName: details.name, userPhoto: details.photo });
+      let details: Tdetails = jwt_decode(token);
+      console.log(details);
+      setUser({ userName: details.name, photoUrl: details.picture });
     } else {
-      setUser();
+      console.log("user is not authenticated");
     }
-  }, [user]);
+  }, [user?.userName]);
 
   return { user, setUser, logUserOut };
 };

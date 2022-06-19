@@ -1,20 +1,21 @@
-import React from "react";
-import Profile from "./profile";
 
-type user = {
+import Profile from "./profile";
+import SchoolComponent from "./shooolComponent";
+
+type Tuser = {
   userName: string;
   photoUrl: string;
 };
-type prop = {
+type Tprop = {
   logOut: () => void;
-  userProfile: user;
+  userProfile: Tuser;
 };
-
-function AuthenticatedUser({ logOut, userProfile }: prop) {
+function AuthenticatedUser({ logOut, userProfile }: Tprop) {
   return (
     <div>
-      <h1>Hello Maricus</h1>
       <Profile logOut={logOut} userProfile={userProfile} />
+      <SchoolComponent />
+      
     </div>
   );
 }
