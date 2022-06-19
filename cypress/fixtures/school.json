@@ -1,0 +1,82 @@
+[
+  {
+    "domains": ["aum.edu.kw"],
+    "web_pages": ["http://www.aum.edu.kw/"],
+    "state-province": null,
+    "name": "American University of Middle East",
+    "country": "Kuwait",
+    "alpha_two_code": "KW"
+  },
+  {
+    "domains": ["middlebury.edu"],
+    "web_pages": ["http://www.middlebury.edu/"],
+    "state-province": null,
+    "name": "Middlebury College",
+    "country": "United States",
+    "alpha_two_code": "US"
+  },
+  {
+    "domains": ["meu.edu.jo"],
+    "web_pages": ["http://www.meu.edu.jo/"],
+    "state-province": null,
+    "name": "Middle East University",
+    "country": "Jordan",
+    "alpha_two_code": "JO"
+  },
+  {
+    "domains": ["metu.edu.tr"],
+    "web_pages": ["http://www.metu.edu.tr/"],
+    "state-province": null,
+    "name": "Middle East Technical University",
+    "country": "Turkey",
+    "alpha_two_code": "TR"
+  },
+  {
+    "domains": ["mtsu.edu"],
+    "web_pages": ["http://www.mtsu.edu/"],
+    "state-province": null,
+    "name": "Middle Tennessee State University",
+    "country": "United States",
+    "alpha_two_code": "US"
+  },
+  {
+    "domains": ["mga.edu"],
+    "web_pages": ["http://www.mga.edu/"],
+    "state-province": null,
+    "name": "Middle Georgia State College",
+    "country": "United States",
+    "alpha_two_code": "US"
+  },
+  {
+    "domains": ["mdx.ac.uk"],
+    "web_pages": ["http://www.mdx.ac.uk/"],
+    "state-province": null,
+    "name": "Middlesex University",
+    "country": "United Kingdom",
+    "alpha_two_code": "GB"
+  },
+  {
+    "domains": ["middlesexcc.edu"],
+    "web_pages": ["http://www.middlesexcc.edu"],
+    "state-province": null,
+    "name": "Middlesex County College",
+    "country": "United States",
+    "alpha_two_code": "US"
+  },
+  {
+    "domains": ["middlesex.mass.edu"],
+    "web_pages": ["http://www.middlesex.mass.edu"],
+    "state-province": null,
+    "name": "Middlesex Community College",
+    "country": "United States",
+    "alpha_two_code": "US"
+  },
+  {
+    "domains": ["middlesbro.ac.uk", "mbro.ac.uk"],
+    "web_pages": ["https://www.mbro.ac.uk/"],
+    "state-province": null,
+    "name": "Middlesbrough College",
+    "country": "United Kingdom",
+    "alpha_two_code": "GB"
+  }
+]

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
 import { GoogleLogin } from "@react-oauth/google";
-
+import "./style.css";
 type Tresponse = {
   credential: string;
 };
@@ -14,13 +14,19 @@ function UnAthenticatedLink() {
 
   return (
     <div className="App">
-      <h1>Login page</h1>
-      <GoogleLogin
-        onSuccess={handleCookies}
-        onError={() => {
-          console.log("Login Failed");
-        }}
-      />
+      <form className="login">
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button disabled>Dissabled</button>
+        <div className="google">
+          <GoogleLogin
+            onSuccess={handleCookies}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+          />
+        </div>
+      </form>
     </div>
   );
 }

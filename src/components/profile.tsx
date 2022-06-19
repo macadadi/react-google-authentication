@@ -8,7 +8,6 @@ type prop = {
   userProfile: user;
 };
 function Profile({ logOut, userProfile }: prop) {
-  console.log(userProfile.photoUrl);
   return (
     <div className="ProfileContainer">
       <h1>Logo</h1>
