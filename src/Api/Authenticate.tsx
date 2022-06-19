@@ -14,6 +14,7 @@ function UnAthenticatedLink() {
 
   return (
     <div className="App">
+      <h1>Login page</h1>
       <GoogleLogin
         onSuccess={handleCookies}
         onError={() => {
