@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[Link to the hosted site](https://react-auth-353712.web.app/)
+[Link to the hosted site](https://react-auth-353712.web.app/). Only works to test for authentication. 
 
 Cd to the root directory of this project then 
 ### run ` npm install` to install required packages 
