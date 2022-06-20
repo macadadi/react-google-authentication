@@ -2,12 +2,12 @@
 
 describe("before signing in", () => {
   it("mounts without crushing", () => {
-    cy.visit("http://localhost:3001");
+    cy.visit("http://localhost:3000");
     cy.get("button").should("be.visible");
   });
 
   it("should not display user profile", () => {
-    cy.visit("http://localhost:3001");
+    cy.visit("http://localhost:3000");
     cy.get("img").should("not.exist");
   });
 });
@@ -19,12 +19,12 @@ describe("Logged in users", () => {
     localStorage.setItem("dtone_id", dtone_id);
   });
   it("should desplay user profile", () => {
-    cy.visit("http://localhost:3001");
+    cy.visit("http://localhost:3000");
     cy.contains("Maricus").should("exist");
   });
 
   it("correctely serch for a school", () => {
-    cy.visit("http://localhost:3001");
+    cy.visit("http://localhost:3000");
     cy.intercept("GET", "*/search?name=middle", {
       fixture: "school.json",
       statusCode: 200,
@@ -33,7 +33,7 @@ describe("Logged in users", () => {
     cy.contains("Middle East University").should("exist");
   });
   it("should pop up a modal with more details when a list of item is clicked", () => {
-    cy.visit("http://localhost:3001");
+    cy.visit("http://localhost:3000");
     cy.intercept("GET", "*/search?name=middle", {
       fixture: "school.json",
       statusCode: 200,
@@ -45,7 +45,7 @@ describe("Logged in users", () => {
   });
 
   it("clicking close should close the modal", () => {
-    cy.visit("http://localhost:3001");
+    cy.visit("http://localhost:3000");
     cy.intercept("GET", "*/search?name=middle", {
       fixture: "school.json",
       statusCode: 200,
